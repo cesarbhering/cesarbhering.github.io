@@ -1,0 +1,25 @@
+body {
+    background-color: #6C757D;
+    color: #F8F9FA;
+}
+
+a {
+    text-decoration: none;
+    color: #ADB5BD;
+}
+
+h3 {
+    line-height: 0;
+}
+
+#MinhaFoto {
+    border-radius: 4%;
+}
+
+#Nome {
+    font-family: monospace;
+}
+
+#SobreMim {
+    font-family: sans-serif;
+}
