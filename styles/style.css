@@ -14,12 +14,25 @@ h3 {
 
 #MinhaFoto {
     border-radius: 4%;
+    display: inline-block;
+    float: left;
+    padding: 4px;
+    background-color: #ADB5BD;
 }
 
 #Nome {
     font-family: monospace;
+    text-align: center;
 }
 
 #SobreMim {
+    padding: 50px;
     font-family: sans-serif;
+    display: inline-block;
+    text-align:unset;
+
+}
+
+#Habilidades {
+    padding: 19px;
 }
