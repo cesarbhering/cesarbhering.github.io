@@ -1,11 +1,11 @@
 body {
-    background-color: #6C757D;
-    color: #F8F9FA;
+    background-color:whitesmoke;
+    color:black;
 }
 
 a {
     text-decoration: none;
-    color: #ADB5BD;
+    color: black;
 }
 
 h3 {
@@ -29,10 +29,31 @@ h3 {
     padding: 50px;
     font-family: sans-serif;
     display: inline-block;
-    text-align:unset;
-
 }
 
 #Habilidades {
-    padding: 19px;
+    display: inline-flex;
+    margin: 0px 40px;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 4px;
+    border:inset;
+}
+
+#EmEstudo {
+    display: inline-flex;
+    margin: 0px 40px;
+    text-align: center;
+    padding: 20px 100px;
+    border-radius: 4px;
+    border:inset;
+}
+
+#Contatos {
+    display: inline-flex;
+    margin: 0px 40px;
+    text-align: center;
+    padding: 20px 100px 55px 100px;
+    border-radius: 4px;
+    border:inset;
 }
