@@ -32,6 +32,7 @@ const colorPalette = document.getElementById('color-palette');
 const btnRest = document.getElementById('clear-board');
 const btnResize = document.getElementById('generate-board');
 const last3Colors = document.getElementsByClassName('color');
+const newColorBtn = document.getElementById('btn-newColors');
 
 function generateRandomColor() {
   return Math.floor(Math.random() * 26987215).toString(16);
@@ -45,6 +46,8 @@ function applyRandomColor() {
   }
 }
 applyRandomColor();
+
+newColorBtn.addEventListener('click', applyRandomColor);
 
 // muda a classe do elemento colorido clickado para selected.
 function changeSelectedColorClass(event) {
@@ -91,7 +94,7 @@ function changeBoardSize() {
     return alert('Board inválido!');
   } if (numberRows < 5) {
     boardResize(5);
-  } else if (numberRows > 43) {
+  } else if (numberRows > 43  ) {
     boardResize(43);
   } else {
     boardResize(numberRows);
