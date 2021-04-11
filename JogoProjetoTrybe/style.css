@@ -1,17 +1,13 @@
 body {
-  background-color: #ffcccf;
-  margin: 0 auto;
-}
+  background: linear-gradient(90deg, #ffcccf, #ffcccf, rgb(204, 204, 255));
+} 
 
 #mySite {
-  color: #fa26a0;
   text-align: center;
-  margin-top: 10%;
-  height: 500px;
+  color: #fa26a0;
   background: linear-gradient(90deg, #ffcccf, #ffcccf, rgb(204, 204, 255));
   border-radius: 2%;
-  width: 500px;
-  margin-left: 37%;
+  margin: auto;
 }
 
 .color {

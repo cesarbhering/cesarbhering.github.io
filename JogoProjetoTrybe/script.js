@@ -91,8 +91,8 @@ function changeBoardSize() {
     return alert('Board inválido!');
   } if (numberRows < 5) {
     boardResize(5);
-  } else if (numberRows > 50) {
-    boardResize(50);
+  } else if (numberRows > 43) {
+    boardResize(43);
   } else {
     boardResize(numberRows);
   }
