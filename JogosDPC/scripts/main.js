@@ -39,15 +39,18 @@ function populateGameCard() {
 	let allGamesCards = document.querySelectorAll('.gameCard');
 	for (let index = 0; index < myJSON.length; index += 1) {
 		let gameName = document.createElement('p');
-		let gameDate = document.createElement('p');
+		let gameDate = document.createElement('span');
 		let gameCountDown = document.createElement('p');
 		let dateBrasilia = Date.parse(myJSON[index].begin_at);
+		let serieName = document.createElement('span');
 		dateBrasilia = new Date(dateBrasilia);
 		gameName.innerText = myJSON[index].name;
-		gameDate.innerText = 'Agendado Para: ' + dateBrasilia.getDate() + '/' + (dateBrasilia.getMonth() + 1) + '/' + dateBrasilia.getFullYear();
+		gameDate.innerText = 'Agendado Para: ' + dateBrasilia.getDate() + '/' + (dateBrasilia.getMonth() + 1) + '/' + dateBrasilia.getFullYear() + ' - '  + (dateBrasilia.toString().slice(16,21));
 		gameCountDown.innerText = countDownClock(myJSON[index].begin_at);
 		gameCountDown.setAttribute('id', 'countdown');
+		serieName.innerText = myJSON[index].serie.name;
 		allGamesCards[index].appendChild(gameName);
+		allGamesCards[index].appendChild(serieName);
 		allGamesCards[index].appendChild(gameCountDown);
 	  allGamesCards[index].appendChild(gameDate);
 	}
@@ -64,3 +67,19 @@ function refreshCountDown() {
 }
 
 setInterval(refreshCountDown, 1000);
+
+// Atribui classe a tag referente ao time que vai jogar.
+function addTeamClass() {
+	let allGamesCards = document.querySelectorAll('.gameCard');
+	for (let index = 0; index < myJSON.length; index += 1) {
+		if (myJSON[index].opponents[0].opponent.id === 126294 && myJSON[index].opponents[1].opponent.id === 1735) {
+			allGamesCards[index].classList += ' classicoBR';
+	  } else if (myJSON[index].opponents[0].opponent.id === 1735 || myJSON[index].opponents[1].opponent.id === 1735) {
+			allGamesCards[index].classList += ' sg';
+		} else if (myJSON[index].opponents[0].opponent.id === 126294 || myJSON[index].opponents[1].opponent.id === 126294) {
+		allGamesCards[index].classList += ' noping';
+		}
+	}
+}
+
+addTeamClass();

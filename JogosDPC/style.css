@@ -1,14 +1,29 @@
 .gameCard {
   border-radius: 30px;
   text-align: center;
-  color: #0077b6;
-  background: #fff url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) left center/contain no-repeat;
   background-size: 90px;
   font-size: large;
   font-weight: bold;
   font-family: monospace;
   margin: 20px;
-  box-shadow: -1px 0px 21px 1px #168aad inset;
+}
+
+.sg {
+color: #0077b6;
+background: #fff url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) left center/contain no-repeat;
+box-shadow: -1px 0px 21px 1px #168aad inset;
+}
+
+.noping {
+	color: #378f15;
+	background: #fff url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) left center/contain no-repeat;
+	box-shadow: -1px 0px 21px 1px #378f15 inset;	
+}
+
+.classicoBR {
+	color: black;
+	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) left center/contain no-repeat, url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat;	
+	box-shadow: -1px 0px 21px 1px black inset;
 }
 
 p {
@@ -52,12 +67,5 @@ h1 {
 
 h3, p {
 	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 20px;
 }
 
-
-footer {
-  text-align: center;
-  background-color: darkgray;
-  margin-top: 0;
-}
