@@ -44,7 +44,7 @@ function populateGameCard() {
 		let dateBrasilia = Date.parse(myJSON[index].begin_at);
 		dateBrasilia = new Date(dateBrasilia);
 		gameName.innerText = myJSON[index].name;
-		gameDate.innerText = 'Agendado Para: ' + dateBrasilia;
+		gameDate.innerText = 'Agendado Para: ' + dateBrasilia.getDate() + '/' + (dateBrasilia.getMonth() + 1) + '/' + dateBrasilia.getFullYear();
 		gameCountDown.innerText = countDownClock(myJSON[index].begin_at);
 		gameCountDown.setAttribute('id', 'countdown');
 		allGamesCards[index].appendChild(gameName);
@@ -63,9 +63,4 @@ function refreshCountDown() {
 	}
 }
 
-setInterval(refreshCountDown, 1000)
-
-var date = (Date.parse(myJSON[0].begin_at))
-var date2 = new Date(date);
-
-console.log(date2)
+setInterval(refreshCountDown, 1000);
