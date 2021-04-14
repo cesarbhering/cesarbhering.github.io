@@ -41,7 +41,7 @@ function populateGameCard() {
 		let gameName = document.createElement('p');
 		let gameDate = document.createElement('p');
 		let gameCountDown = document.createElement('p');
-		let dateBrasilia = Date.parse(myJSON[0].begin_at);
+		let dateBrasilia = Date.parse(myJSON[index].begin_at);
 		dateBrasilia = new Date(dateBrasilia);
 		gameName.innerText = myJSON[index].name;
 		gameDate.innerText = 'Agendado Para: ' + dateBrasilia;
