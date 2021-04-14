@@ -3,9 +3,7 @@ const divGames =  document.getElementById('listAllGames');
 
 
 //FALTA VER COMO ATUALIZAR O JSON SERVER SIDE - BUSCAR MAIS INFOS.
-//PEGAR UNS LAYOUTS MANEIROS PARA OS CARDS
 //DEPOIS DE TERMINAR O DA SG TENTAR FAZER O DO RDO DEPOIS DUNHA1-DEPOIS NOPING - DEPOIS CREWMATES - DEPOIS BINOMISTAS
-// PALETA: https://coolors.co/03045e-023e8a-0077b6-0096c7-00b4d8-48cae4-90e0ef-ade8f4-caf0f8
 // Adicionar as transmissoes (em PT BR CLARO)
 
 // Cria os cartões dos jogos
@@ -43,8 +41,10 @@ function populateGameCard() {
 		let gameName = document.createElement('p');
 		let gameDate = document.createElement('p');
 		let gameCountDown = document.createElement('p');
+		let dateBrasilia = Date.parse(myJSON[0].begin_at);
+		dateBrasilia = new Date(dateBrasilia);
 		gameName.innerText = myJSON[index].name;
-		gameDate.innerText = 'Agendado Para: ' + myJSON[index].begin_at.slice(0,10) + ' às ' + myJSON[index].begin_at.slice(11,16);
+		gameDate.innerText = 'Agendado Para: ' + dateBrasilia;
 		gameCountDown.innerText = countDownClock(myJSON[index].begin_at);
 		gameCountDown.setAttribute('id', 'countdown');
 		allGamesCards[index].appendChild(gameName);
@@ -64,3 +64,8 @@ function refreshCountDown() {
 }
 
 setInterval(refreshCountDown, 1000)
+
+var date = (Date.parse(myJSON[0].begin_at))
+var date2 = new Date(date);
+
+console.log(date2)
