@@ -1,7 +1,6 @@
 .gameCard {
   border-radius: 15px;
   text-align: left;
-  background-size: 90px;
   font-size: large;
   font-weight: bold;
   font-family: monospace;
@@ -9,9 +8,9 @@
 }
 
 .sg {
-color: #0077b6;
-background: #fff url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat;
-box-shadow: -1px 0px 21px 1px #168aad inset;
+	color: #0077b6;
+	background: #fff url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat;
+	box-shadow: -1px 0px 21px 1px #168aad inset;
 }
 
 .noping {
@@ -47,7 +46,6 @@ p, span {
 
 body{
   background-color: white;
-	max-width: 500px;
   margin: auto;
 }
 
