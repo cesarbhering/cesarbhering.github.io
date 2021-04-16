@@ -76,11 +76,11 @@ function addTeamClass() {
 		if (myJSON[index].opponents[0].opponent.id === 126294 && myJSON[index].opponents[1].opponent.id === 1735) {
 			allGamesCards[index].classList += ' classicoBR';
 	  } else if (myJSON[index].opponents[0].opponent.id === 1735 || myJSON[index].opponents[1].opponent.id === 1735) {
-			allGamesCards[index].classList += ' sg bg-info text-white'; //SG
+			allGamesCards[index].classList += ' sg'; //SG
 		} else if (myJSON[index].opponents[0].opponent.id === 126294 || myJSON[index].opponents[1].opponent.id === 126294) {
-		allGamesCards[index].classList += ' noping bg-success text-white';
+		allGamesCards[index].classList += ' noping';
 		} else if (myJSON[index].opponents[0].opponent.id === 127941 || myJSON[index].opponents[1].opponent.id === 127941) {
-			allGamesCards[index].classList += ' crewmates bg-dark text-white';
+			allGamesCards[index].classList += ' crewmates bg-secondary text-white';
 		}
 	}
 }

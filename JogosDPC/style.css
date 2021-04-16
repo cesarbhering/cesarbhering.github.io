@@ -9,23 +9,19 @@
 
 .sg {
 	background: #fff url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat; */
-	box-shadow: -1px 0px 21px 1px #168aad inset;
 }
 
 .noping {
-	background: #fff url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) right center/contain no-repeat; */
-	box-shadow: -1px 0px 21px 1px #23580e inset;	
+	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) right center/contain no-repeat; */
 }
 
 .crewmates {
-	background: #fff url(https://cdn.pandascore.co/images/team/image/127941/190px_crewmates_logo_2021.png) right center/contain no-repeat;*/
-	box-shadow: -1px 0px 21px 1px black inset;
+	background: url(https://cdn.pandascore.co/images/team/image/127941/190px_crewmates_logo_2021.png) right center/contain no-repeat;*/
 }
 
 .classicoBR {
 	color: black;
 /*	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) left center/contain no-repeat, url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat;	*/
-	box-shadow: -1px 0px 21px 1px black inset;
 }
 
 p, span {
