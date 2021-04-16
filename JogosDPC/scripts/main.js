@@ -11,6 +11,7 @@ function createGamesCard() {
 	for (let games in myJSON) {
 		let game = document.createElement('div');
 		game.setAttribute('class', 'gameCard');
+		game.classList += ' container-fluid';
 		divGames.appendChild(game);
 	}
 }
