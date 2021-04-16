@@ -8,15 +8,23 @@
 }
 
 .sg {
-	background: #fff url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat; */
+	background: url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat;
+	background-size: 5%;
 }
 
 .noping {
-	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) right center/contain no-repeat; */
+	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) right center/contain no-repeat;
+	background-size: 5%;
 }
 
 .crewmates {
-	background: url(https://cdn.pandascore.co/images/team/image/127941/190px_crewmates_logo_2021.png) right center/contain no-repeat;*/
+	background: url(https://cdn.pandascore.co/images/team/image/127941/190px_crewmates_logo_2021.png) right center/contain no-repeat;
+	background-size: 5%;
+}
+
+.lvlup {
+	background: url(https://cdn.pandascore.co/images/team/image/1948/t11113.png) right center/contain no-repeat;
+	background-size: 5%;
 }
 
 .classicoBR {
@@ -27,17 +35,4 @@
 p, span {
   padding-left: 0px;
   margin-left: 10px;
-}
-
-*{padding: 0; margin: 0; box-sizing: border-box;}
-
-body{
-  background-color: white;
-  margin: auto;
-}
-
-h1 {
-	font-family: 'Dancing Script', cursive;
-	font-size: 80px;
-	margin-bottom: 20px;
 }

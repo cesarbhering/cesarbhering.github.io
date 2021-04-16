@@ -11,7 +11,6 @@ function createGamesCard() {
 	for (let games in myJSON) {
 		let game = document.createElement('div');
 		game.setAttribute('class', 'gameCard');
-		game.classList += ' container-fluid'
 		divGames.appendChild(game);
 	}
 }
@@ -76,11 +75,13 @@ function addTeamClass() {
 		if (myJSON[index].opponents[0].opponent.id === 126294 && myJSON[index].opponents[1].opponent.id === 1735) {
 			allGamesCards[index].classList += ' classicoBR';
 	  } else if (myJSON[index].opponents[0].opponent.id === 1735 || myJSON[index].opponents[1].opponent.id === 1735) {
-			allGamesCards[index].classList += ' sg'; //SG
+			allGamesCards[index].classList += ' sg bg-info text-white shadow-sm'; //SG
 		} else if (myJSON[index].opponents[0].opponent.id === 126294 || myJSON[index].opponents[1].opponent.id === 126294) {
-		allGamesCards[index].classList += ' noping bg-success text-dark';
+		allGamesCards[index].classList += ' noping bg-success text0-dark shadow-sm';
 		} else if (myJSON[index].opponents[0].opponent.id === 127941 || myJSON[index].opponents[1].opponent.id === 127941) {
-			allGamesCards[index].classList += ' crewmates bg-secondary text-white';
+			allGamesCards[index].classList += ' crewmates bg-secondary text-white shadow-sm';
+		} else if (myJSON[index].opponents[0].opponent.id === 1948 || myJSON[index].opponents[1].opponent.id === 1948) {
+			allGamesCards[index].classList += ' lvlup bg-primary text-white shadow-sm';
 		}
 	}
 }
