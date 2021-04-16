@@ -11,6 +11,7 @@ function createGamesCard() {
 	for (let games in myJSON) {
 		let game = document.createElement('div');
 		game.setAttribute('class', 'gameCard');
+		game.classList += ' container-fluid'
 		divGames.appendChild(game);
 	}
 }
@@ -75,11 +76,11 @@ function addTeamClass() {
 		if (myJSON[index].opponents[0].opponent.id === 126294 && myJSON[index].opponents[1].opponent.id === 1735) {
 			allGamesCards[index].classList += ' classicoBR';
 	  } else if (myJSON[index].opponents[0].opponent.id === 1735 || myJSON[index].opponents[1].opponent.id === 1735) {
-			allGamesCards[index].classList += ' sg';
+			allGamesCards[index].classList += ' sg bg-info text-white'; //SG
 		} else if (myJSON[index].opponents[0].opponent.id === 126294 || myJSON[index].opponents[1].opponent.id === 126294) {
-		allGamesCards[index].classList += ' noping';
+		allGamesCards[index].classList += ' noping bg-success text-white';
 		} else if (myJSON[index].opponents[0].opponent.id === 127941 || myJSON[index].opponents[1].opponent.id === 127941) {
-			allGamesCards[index].classList += ' crewmates';
+			allGamesCards[index].classList += ' crewmates bg-dark text-white';
 		}
 	}
 }
