@@ -78,7 +78,7 @@ function addTeamClass() {
 	  } else if (myJSON[index].opponents[0].opponent.id === 1735 || myJSON[index].opponents[1].opponent.id === 1735) {
 			allGamesCards[index].classList += ' sg'; //SG
 		} else if (myJSON[index].opponents[0].opponent.id === 126294 || myJSON[index].opponents[1].opponent.id === 126294) {
-		allGamesCards[index].classList += ' noping';
+		allGamesCards[index].classList += ' noping bg-success text-dark';
 		} else if (myJSON[index].opponents[0].opponent.id === 127941 || myJSON[index].opponents[1].opponent.id === 127941) {
 			allGamesCards[index].classList += ' crewmates bg-secondary text-white';
 		}
