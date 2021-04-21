@@ -26,6 +26,10 @@
   flex-basis: 20%;
 }
 
+p {
+  padding-left: 10px;
+}
+
 .sg {
 	background-image: url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png);
   background-repeat: no-repeat;
