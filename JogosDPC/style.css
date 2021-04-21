@@ -1,3 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.listAllGames {
+  display: flex;
+}
+
 .gameCard {
   border-radius: 15px;
   text-align: left;
@@ -5,25 +14,43 @@
   font-weight: bold;
   font-family: monospace;
   margin-top: 10px;
+  display: flex;
+}
+
+.gameInfo {
+  flex-grow: 1;
+  flex-basis: 80%;
+}
+
+.logoSpace {
+  flex-basis: 20%;
+}
+
+p {
+  padding-left: 10px;
 }
 
 .sg {
-	background: url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat;
+	background-image: url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .noping {
-	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) right center/contain no-repeat;
+	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .crewmates {
-	background: url(https://cdn.pandascore.co/images/team/image/127941/190px_crewmates_logo_2021.png) right center/contain no-repeat;
+	background: url(https://cdn.pandascore.co/images/team/image/127941/190px_crewmates_logo_2021.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .lvlup {
-	background: url(https://cdn.pandascore.co/images/team/image/1948/t11113.png) right center/contain no-repeat;
+	background: url(https://cdn.pandascore.co/images/team/image/1948/t11113.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.classicoBR {
-	color: black;
-/*	background: url(https://cdn.pandascore.co/images/team/image/126294/noping-e-sports.png) left center/contain no-repeat, url(https://cdn.pandascore.co/images/team/image/1735/SG_e-sports.png) right center/contain no-repeat;	*/
-}
