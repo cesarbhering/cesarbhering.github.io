@@ -3,8 +3,9 @@ const divGames =  document.getElementById('listAllGames');
 
 
 //FALTA VER COMO ATUALIZAR O JSON SERVER SIDE - BUSCAR MAIS INFOS.
-//DEPOIS DE TERMINAR O DA SG TENTAR FAZER O DO RDO DEPOIS DUNHA1-DEPOIS NOPING - DEPOIS CREWMATES - DEPOIS BINOMISTAS
+//INSERIR GORLIZ PRIDE
 // Adicionar as transmissoes (em PT BR CLARO)
+// VERIFICAR COMO FAZER QUANDO FOR CONFRONTO ENTRE BRS
 
 // Cria os cartões dos jogos
 function createGamesCard() {
@@ -93,8 +94,15 @@ function addTeamClass() {
 		} else if (myJSON[index].opponents[0].opponent.id === 1948 || myJSON[index].opponents[1].opponent.id === 1948) {
 			allGamesCards[index].classList += ' bg-primary text-white shadow-sm'; //LVLup
 			logoSpaces[index].classList += ' lvlup'
-		}
+		} else if (myJSON[index].opponents[0].opponent.id === 128774 || myJSON[index].opponents[1].opponent.id === 128774) {
+			allGamesCards[index].classList += ' bg-warning text-dark shadow-sm'; //LVLup
+			logoSpaces[index].classList += ' incubus'
+		} else if (myJSON[index].opponents[0].opponent.id === 128849 || myJSON[index].opponents[1].opponent.id === 128849) {
+			allGamesCards[index].classList += ' bg-white text-dark shadow-sm'; //binomistas
+			logoSpaces[index].classList += '  binomistas'
 	}
 }
+}
+
 
 addTeamClass();
