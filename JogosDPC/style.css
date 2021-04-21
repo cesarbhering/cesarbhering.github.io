@@ -29,6 +29,8 @@
 p {
   padding-left: 10px;
   font-size: 2vh;
+  margin: 0;
+  padding: 0;
 }
 
 .sg {
