@@ -11,8 +11,13 @@ function createGamesCard() {
 	for (let games in myJSON) {
 		let game = document.createElement('div');
 		game.setAttribute('class', 'gameCard');
-		game.classList += ' container-fluid';
+		let gameInfo = document.createElement('div');
+		gameInfo.setAttribute('class', 'gameInfo');
+		let logoSpace = document.createElement('div');
+		logoSpace.setAttribute('class', 'logoSpace');
 		divGames.appendChild(game);
+		game.appendChild(gameInfo);
+		game.appendChild(logoSpace);
 	}
 }
 createGamesCard();
@@ -37,13 +42,13 @@ function countDownClock(gameDate) {
 
 // Coloca as infos nos cartões dos jogos
 function populateGameCard() {
-	let allGamesCards = document.querySelectorAll('.gameCard');
+	let allGamesCards = document.querySelectorAll('.gameInfo');
 	for (let index = 0; index < myJSON.length; index += 1) {
 		let gameName = document.createElement('p');
-		let gameDate = document.createElement('span');
+		let gameDate = document.createElement('p');
 		let gameCountDown = document.createElement('p');
 		let dateBrasilia = Date.parse(myJSON[index].begin_at);
-		let serieName = document.createElement('span');
+		let serieName = document.createElement('p');
 		dateBrasilia = new Date(dateBrasilia);
 		gameName.innerText = myJSON[index].name;
 		gameDate.innerText = 'Agendado Para: ' + dateBrasilia.getDate() + '/' + (dateBrasilia.getMonth() + 1) + '/' + dateBrasilia.getFullYear() + ' - '  + (dateBrasilia.toString().slice(16,21));
@@ -72,17 +77,22 @@ setInterval(refreshCountDown, 1000);
 // Atribui classe a tag referente ao time que vai jogar.
 function addTeamClass() {
 	let allGamesCards = document.querySelectorAll('.gameCard');
+	let logoSpaces = document.querySelectorAll('.logoSpace');
 	for (let index = 0; index < myJSON.length; index += 1) {
 		if (myJSON[index].opponents[0].opponent.id === 126294 && myJSON[index].opponents[1].opponent.id === 1735) {
 			allGamesCards[index].classList += ' classicoBR';
 	  } else if (myJSON[index].opponents[0].opponent.id === 1735 || myJSON[index].opponents[1].opponent.id === 1735) {
-			allGamesCards[index].classList += ' sg bg-info text-white shadow-sm'; //SG
+			allGamesCards[index].classList += ' bg-info text-white shadow-sm'; //SG
+			logoSpaces[index].classList += ' sg'
 		} else if (myJSON[index].opponents[0].opponent.id === 126294 || myJSON[index].opponents[1].opponent.id === 126294) {
-		allGamesCards[index].classList += ' noping bg-success text0-dark shadow-sm';
+		allGamesCards[index].classList += ' bg-success text0-dark shadow-sm'; //NoPing
+		logoSpaces[index].classList += ' noping'
 		} else if (myJSON[index].opponents[0].opponent.id === 127941 || myJSON[index].opponents[1].opponent.id === 127941) {
-			allGamesCards[index].classList += ' crewmates bg-secondary text-white shadow-sm';
+			allGamesCards[index].classList += ' bg-secondary text-white shadow-sm'; //crewmates
+			logoSpaces[index].classList += ' crewmates'
 		} else if (myJSON[index].opponents[0].opponent.id === 1948 || myJSON[index].opponents[1].opponent.id === 1948) {
-			allGamesCards[index].classList += ' lvlup bg-primary text-white shadow-sm';
+			allGamesCards[index].classList += ' bg-primary text-white shadow-sm'; //LVLup
+			logoSpaces[index].classList += ' lvlup'
 		}
 	}
 }
