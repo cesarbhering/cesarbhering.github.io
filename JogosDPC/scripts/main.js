@@ -93,8 +93,15 @@ function addTeamClass() {
 		} else if (myJSON[index].opponents[0].opponent.id === 1948 || myJSON[index].opponents[1].opponent.id === 1948) {
 			allGamesCards[index].classList += ' bg-primary text-white shadow-sm'; //LVLup
 			logoSpaces[index].classList += ' lvlup'
-		}
+		} else if (myJSON[index].opponents[0].opponent.id === 128774 || myJSON[index].opponents[1].opponent.id === 128774) {
+			allGamesCards[index].classList += ' bg-warning text-dark shadow-sm'; //LVLup
+			logoSpaces[index].classList += ' incubus'
+		} else if (myJSON[index].opponents[0].opponent.id === 128849 || myJSON[index].opponents[1].opponent.id === 128849) {
+			allGamesCards[index].classList += ' bg-white text-dark shadow-sm'; //binomistas
+			logoSpaces[index].classList += '  binomistas'
 	}
 }
+}
+
 
 addTeamClass();
