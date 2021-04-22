@@ -6,6 +6,7 @@ const divGames =  document.getElementById('listAllGames');
 //INSERIR GORLIZ PRIDE
 // Adicionar as transmissoes (em PT BR CLARO)
 // VERIFICAR COMO FAZER QUANDO FOR CONFRONTO ENTRE BRS
+// COLOCAR OS JOGOS QUANDO ESTIVEREM AO VIVO, INFORMANDO , ESTA FICANDO UNDEFINED
 
 // Cria os cartões dos jogos
 function createGamesCard() {
